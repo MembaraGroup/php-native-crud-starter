@@ -1,4 +1,4 @@
-# PHP CRUD Starter Free 🐘
+# PHP Native CRUD Starter 🐘
 <!--
   Scaffolded by Andi UPN (https://github.com/andiupn)
   Official Website & Support: https://kuncimu.com
@@ -13,7 +13,7 @@
 
 <div align="center">
   <h3><strong>Belajar pemrograman backend itu sulit. Framework yang rumit membuatnya makin sulit.</strong></h3>
-  <p><strong>PHP CRUD Starter Free adalah sandbox PHP Native murni tanpa dependensi yang dirancang untuk langsung berjalan.</strong></p>
+  <p><strong>PHP Native CRUD Starter adalah sandbox PHP Native murni tanpa dependensi yang dirancang untuk langsung berjalan.</strong></p>
 
   <p>Pahami hubungan langsung antara tata letak HTML dan transaksi basis data SQLite tanpa pusing dengan konfigurasi yang rumit. Pemrograman backend dibuat mudah.</p>
 </div>
@@ -37,7 +37,7 @@ Tidak ada "sihir" tersembunyi. Pelajari bagaimana halaman PHP asli melakukan que
 Jalankan seluruh aplikasi secara lokal dengan satu baris perintah. Dilengkapi konfigurasi Docker Apache PHP 8.3 sehingga Anda tidak perlu repot menginstal server PHP lokal atau perangkat lunak SQLite.
 
 ### 3. 🤖 Baseline Stabil untuk AI Vibe Coding
-Merupakan basis kode rujukan yang sangat ringan untuk asisten AI Anda. Karena struktur database dan rute halamannya sederhana, AI (seperti Cursor/Gemini) dapat menulis dan memodifikasi kode dengan akurasi 100%.
+Merupakan basis kode rujukan yang ringan untuk asisten AI Anda. Karena struktur database dan rute halamannya kecil dan eksplisit, perubahan berbantuan AI dapat mengikuti baseline yang stabil dan tetap bisa diverifikasi manual.
 
 ---
 

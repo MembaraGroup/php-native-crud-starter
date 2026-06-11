@@ -1,4 +1,4 @@
-# PHP CRUD Starter Free 🐘
+# PHP Native CRUD Starter 🐘
 <!--
   Scaffolded by Andi UPN (https://github.com/andiupn)
   Official Website & Support: https://kuncimu.com
@@ -13,7 +13,7 @@
 
 <div align="center">
   <h3><strong>Learning backend development is hard. Messy frameworks make it harder.</strong></h3>
-  <p><strong>PHP CRUD Starter Free is a pristine, zero-dependency PHP Native sandbox built to run instantly.</strong></p>
+  <p><strong>PHP Native CRUD Starter is a pristine, zero-dependency PHP Native sandbox built to run instantly.</strong></p>
 
   <p>Understand the raw connection between HTML layouts and SQLite database transactions without complex configurations or setup headaches. Backend coding, simplified.</p>
 </div>
@@ -37,17 +37,17 @@ No hidden magic. Learn how a real PHP page queries an SQLite database file direc
 Run the entire application locally with a single command. Equipped with Apache PHP 8.3 Docker configurations so you don't have to install local PHP environments or SQLite software.
 
 ### 3. 🤖 AI Vibe Coding Baseline
-A perfect, lightweight reference codebase for AI coding tools. Because the database and routing are simple, Cursor or Gemini can read and edit the code with absolute accuracy.
+A lightweight reference codebase for AI coding tools. Because the database and routing are small and explicit, AI-assisted changes can follow a stable baseline that you can still verify manually.
 
 ---
 
-## 📊 Free vs PreBasic: Why Upgrade?
+## 📊 Starter vs PreBasic: Why Upgrade?
 
-| Feature | 🆓 Free Edition | 💎 PreBasic Edition |
+| Feature | 🆓 Starter Edition | 💎 PreBasic Edition |
 |---|:---:|:---:|
 | **Form Protection** | Basic validation | CSRF Token Verification |
 | **Grid Data Table** | Standard HTML | High-performance Offline DataTables |
-| **Assets Dependency** | Online CDN (Bootstrap) | Local Offline Assets |
+| **Assets Packaging** | Local Offline Assets | Local Offline Assets + DataTables Bundle |
 | **Error Handling** | Basic | Try-Catch Logs & Exceptions |
 
 ---
