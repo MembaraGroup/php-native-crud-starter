@@ -12,6 +12,11 @@ if [[ "$keep_up" != "1" ]]; then
   trap 'docker compose -f "$repo_root/docker-compose.yml" down >/dev/null 2>&1 || true' EXIT
 fi
 
+fail() {
+  echo "$1" >&2
+  exit 1
+}
+
 wait_for_http() {
   local url="$1"
   for _ in $(seq 1 60); do
@@ -21,8 +26,39 @@ wait_for_http() {
     sleep 1
   done
 
-  echo "http failed: $url" >&2
-  exit 1
+  fail "http failed: $url"
+}
+
+fetch_page() {
+  local url="$1"
+  local cookie_file="${2:-}"
+
+  if [[ -n "$cookie_file" ]]; then
+    curl -fsS -c "$cookie_file" -b "$cookie_file" "$url"
+    return
+  fi
+
+  curl -fsS "$url"
+}
+
+assert_contains() {
+  local content="$1"
+  local needle="$2"
+  local label="$3"
+
+  if ! grep -Fq "$needle" <<<"$content"; then
+    fail "assert contains failed: $label -> $needle"
+  fi
+}
+
+assert_not_contains() {
+  local content="$1"
+  local needle="$2"
+  local label="$3"
+
+  if grep -Fq "$needle" <<<"$content"; then
+    fail "assert not contains failed: $label -> $needle"
+  fi
 }
 
 find_item_id() {
@@ -50,10 +86,18 @@ wait_for_http "http://localhost:8081/"
 wait_for_http "http://localhost:8081/?route=item/index"
 wait_for_http "http://localhost:8081/assets/vendor/bootstrap/bootstrap.min.css"
 
-name="Codex Smoke Free $(date +%s)"
-updated="${name} Updated"
+list_page="$(fetch_page "http://localhost:8081/?route=item/index")"
+create_page="$(fetch_page "http://localhost:8081/?route=item/create")"
 
-curl -fsS -L \
+assert_not_contains "$list_page" 'id="dataTable"' "starter list no datatable id"
+assert_not_contains "$list_page" 'DataTable({' "starter list no datatable init"
+assert_not_contains "$create_page" 'name="csrf_token"' "starter create no csrf field"
+
+name="Codex Smoke Starter $(date +%s)"
+updated="${name} Updated"
+cookie_file="$(mktemp)"
+
+curl -fsS -L -c "$cookie_file" -b "$cookie_file" \
   -d "name=$name" \
   -d "type=Smoke" \
   -d "description=Created by standalone smoke test" \
@@ -64,12 +108,9 @@ curl -fsS -L \
   "http://localhost:8081/?route=item/create" >/dev/null
 
 id="$(find_item_id "$name")"
-if [[ -z "$id" ]]; then
-  echo "create failed" >&2
-  exit 1
-fi
+[[ -n "$id" ]] || fail "create failed: starter"
 
-curl -fsS -L \
+curl -fsS -L -c "$cookie_file" -b "$cookie_file" \
   -d "name=$updated" \
   -d "type=Smoke" \
   -d "description=Updated by standalone smoke test" \
@@ -79,13 +120,23 @@ curl -fsS -L \
   -d "phone=0800000000" \
   "http://localhost:8081/?route=item/edit&id=$id" >/dev/null
 
-curl -fsS -L \
+updated_id="$(find_item_id "$updated")"
+if [[ "$updated_id" != "$id" ]]; then
+  fail "update failed: starter"
+fi
+
+curl -fsS -L -c "$cookie_file" -b "$cookie_file" \
   -d "confirm=yes" \
   "http://localhost:8081/?route=item/delete&id=$id" >/dev/null
 
-echo "smoke ok: free"
+rm -f "$cookie_file"
+
+if [[ -n "$(find_item_id "$updated")" ]]; then
+  fail "delete failed: starter"
+fi
+
+echo "smoke ok: starter"
 
 if [[ "$keep_up" == "1" ]]; then
   echo "services kept running"
 fi
-

@@ -95,7 +95,7 @@ if (!function_exists('renderLayoutFooter')) {
         <div class="container-lg">
             <div class="d-flex flex-column flex-md-row justify-content-between align-items-start align-items-md-center gap-2">
                 <p class="mb-0 text-white small">
-                    &copy; <?= date('Y'); ?> <?= htmlspecialchars(config('app_name', 'CRUD Simple'), ENT_QUOTES, 'UTF-8'); ?>. Built for basic CRUD practice.
+                    &copy; <?= date('Y'); ?> <?= htmlspecialchars(config('app_name', 'CRUD Simple'), ENT_QUOTES, 'UTF-8'); ?>. Built for starter-level CRUD learning.
                 </p>
                 <p class="mb-0 small">
                     <a href="https://kuncimu.com" class="text-white" target="_blank" rel="noopener">kuncimu.com</a>

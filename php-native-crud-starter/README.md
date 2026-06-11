@@ -1,70 +1,108 @@
-# PHP Native CRUD Starter 🐘
-<!--
-  Scaffolded by Andi UPN (https://github.com/andiupn)
-  Official Website & Support: https://kuncimu.com
-  Licensed under Free Donation License
--->
+# PHP Native CRUD Starter
 
-<div align="center">
-  <strong>English</strong> | <a href="README.id.md">Bahasa Indonesia</a>
-</div>
+Bilingual: [🇮🇩 Bahasa Indonesia](README.id.md) | [🇺🇸 English](README.md)
 
-<br />
+Donation-friendly starter edition for first-time coding learners, new students in months 0-6, and anyone who needs a CRUD example that actually runs.
 
-<div align="center">
-  <h3><strong>Learning backend development is hard. Messy frameworks make it harder.</strong></h3>
-  <p><strong>PHP Native CRUD Starter is a pristine, zero-dependency PHP Native sandbox built to run instantly.</strong></p>
+It is also useful as stable reference code for AI vibe coding: the app already runs, so AI-assisted edits have a concrete baseline to follow.
 
-  <p>Understand the raw connection between HTML layouts and SQLite database transactions without complex configurations or setup headaches. Backend coding, simplified.</p>
-</div>
+## Audience
 
-> 📦 Free edition by **Andi UPN** ([kuncimu.com](https://kuncimu.com)) · Licensed under [Free Donation License](LICENSE.md)  
-> 💖 Support the project via donation listed in `DONATE.md` · 🚀 Need DataTables and CSRF safety? Upgrade to [PreBasic Edition](https://github.com/sponsors/andiupn?frequency=monthly)
+- First-time coding learners.
+- New PHP students in the first 0-6 months.
+- Beginners who need readable code before learning frameworks.
 
----
+## Best For
 
-## 💡 The Problem: The Framework Abstraction Barrier
-Modern web frameworks (Laravel, Symfony) are incredibly powerful, but they hide how the web actually works under layers of abstraction. Beginners get lost in routing configurations, migrations, and ORM setups before they can even write a simple database INSERT statement.
+- Learning how a CRUD page connects to a database.
+- Running a small Native PHP app without a complex setup.
+- Giving an AI coding tool a simple, stable baseline to modify.
 
----
+## Not For
 
-## ⚡ The Solution: Back to the Roots
+- Users who need DataTables, CSRF, or a more polished paid starter.
+- Junior programmers who already need formal project structure.
 
-### 1. 🐘 Raw PHP & SQLite Native Connection
-No hidden magic. Learn how a real PHP page queries an SQLite database file directly using native `SQLite3` object connection. Perfect for beginners in their first 0-6 months of programming.
+## Why This Tier
 
-### 2. 🐳 Zero-Dependency & Docker-Ready Setup
-Run the entire application locally with a single command. Equipped with Apache PHP 8.3 Docker configurations so you don't have to install local PHP environments or SQLite software.
+Starter should feel generous, not cheap. It keeps the app small enough to understand, while still proving the full CRUD loop works.
 
-### 3. 🤖 AI Vibe Coding Baseline
-A lightweight reference codebase for AI coding tools. Because the database and routing are small and explicit, AI-assisted changes can follow a stable baseline that you can still verify manually.
+## Why Upgrade
 
----
+Move to PreBasic when you want offline assets, DataTables, safer form submissions, and more complete documentation.
 
-## 📊 Starter vs PreBasic: Why Upgrade?
+## Manual Coding Use
 
-| Feature | 🆓 Starter Edition | 💎 PreBasic Edition |
-|---|:---:|:---:|
-| **Form Protection** | Basic validation | CSRF Token Verification |
-| **Grid Data Table** | Standard HTML | High-performance Offline DataTables |
-| **Assets Packaging** | Local Offline Assets | Local Offline Assets + DataTables Bundle |
-| **Error Handling** | Basic | Try-Catch Logs & Exceptions |
+Run the app, read one route at a time, edit one form field, then verify the result in the browser.
 
----
+## AI Vibe Coding Use
 
-## 🚀 Get Started in 3 Steps
+Use this edition as the first stable prompt reference. Ask the AI to keep the current route/view style and verify every change with the repo commands.
 
-### 1. Run the Application:
+## Run With Docker
+
 ```bash
 docker compose up --build
 ```
 
-### 2. Open in Browser:
+Open:
+
 ```text
 http://localhost:8081
 ```
 
-### 3. Explore Routes:
+## Routes
+
 - Home: `http://localhost:8081/`
 - Item list: `http://localhost:8081/?route=item/index`
-- Add item: `http://localhost:8081/?route=item/create`
+- Create item: `http://localhost:8081/?route=item/create`
+
+## Screenshots
+
+Full screenshot set: [`docs/screenshots/`](docs/screenshots)
+
+### Home Desktop
+
+![Starter Home Desktop](docs/screenshots/home-desktop.png)
+
+### Item List Desktop
+
+![Starter Item List Desktop](docs/screenshots/list-desktop.png)
+
+### Item List Mobile
+
+![Starter Item List Mobile](docs/screenshots/list-mobile.png)
+
+### Create Form Desktop
+
+![Starter Create Desktop](docs/screenshots/create-desktop.png)
+
+## Metadata
+
+- Slug: `php-native-crud-starter`
+- Tier: `starter`
+- Backend: `native`
+- Frontend: `html`
+- Database: `sqlite`
+- Runtime: Docker PHP 8.3 Apache
+- Distribution: public donation
+
+## Files
+
+- `app/` contains view and model logic.
+- `config/` contains env-driven configuration and database setup.
+- `public/` is the web root.
+- `db/database.sqlite` is the local SQLite database.
+
+## Donation
+
+See `DONATE.md`.
+
+## Verification Commands
+
+From this standalone repository:
+
+```bash
+./scripts/lint.sh
+./scripts/smoke.sh
+```

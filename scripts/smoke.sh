@@ -7,6 +7,6 @@ while IFS= read -r project; do
   echo "[smoke] $(basename "$project")"
   (
     cd "$project"
-    ./scripts/smoke.sh
+    bash ./scripts/smoke.sh </dev/null
   )
 done < <(find "$ROOT_DIR" -mindepth 1 -maxdepth 1 -type d -name 'php-*' | sort)
