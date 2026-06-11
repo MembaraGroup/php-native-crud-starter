@@ -20,6 +20,8 @@ It is also useful as stable reference code for AI vibe coding: the app already r
   </tr>
 </table>
 
+This view is intentionally simple: plain CRUD pages, readable routing, and no heavier UI layer.
+
 ## Audience
 
 - First-time coding learners.
