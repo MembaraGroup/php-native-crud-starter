@@ -81,6 +81,10 @@ Free is meant to feel generous, not abandoned. Donation helps keep that promise 
 
 Full screenshot set: [`php-native-crud-starter/docs/screenshots/`](php-native-crud-starter/docs/screenshots)
 
+## Social Preview
+
+GitHub social card image: [`php-native-crud-starter/assets/social-preview.png`](php-native-crud-starter/assets/social-preview.png)
+
 ### Home Desktop
 
 ![Starter Home Desktop](php-native-crud-starter/docs/screenshots/home-desktop.png)
