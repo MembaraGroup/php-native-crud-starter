@@ -6,6 +6,20 @@ Donation-friendly starter edition for first-time coding learners, new students i
 
 It is also useful as stable reference code for AI vibe coding: the app already runs, so AI-assisted edits have a concrete baseline to follow.
 
+## Preview
+
+![Starter social preview](assets/social-preview.png)
+
+## Top Visuals
+
+<table>
+  <tr>
+    <td align="center"><img src="docs/screenshots/home-desktop.png" alt="Starter Home Desktop" width="240"><br>Home</td>
+    <td align="center"><img src="docs/screenshots/list-search-desktop.png" alt="Starter Item List Search Desktop" width="240"><br>Search</td>
+    <td align="center"><img src="docs/screenshots/create-desktop.png" alt="Starter Create Desktop" width="240"><br>Create</td>
+  </tr>
+</table>
+
 ## Audience
 
 - First-time coding learners.
@@ -64,6 +78,10 @@ Full screenshot set: [`docs/screenshots/`](docs/screenshots)
 ### Home Desktop
 
 ![Starter Home Desktop](docs/screenshots/home-desktop.png)
+
+### Item List Search Desktop
+
+![Starter Item List Search Desktop](docs/screenshots/list-search-desktop.png)
 
 ### Item List Desktop
 
