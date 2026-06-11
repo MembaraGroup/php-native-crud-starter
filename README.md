@@ -1,3 +1,9 @@
+<!--
+  Scaffolded by Andi UPN (https://github.com/andiupn)
+  Official Website & Support: https://kuncimu.com
+  Licensed under MIT License
+-->
+
 # PHP Native CRUD Starter
 
 Tier hub repository for the final `starter` naming line.
