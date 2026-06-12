@@ -37,7 +37,7 @@ Tidak ada "sihir" tersembunyi. Pelajari bagaimana halaman PHP asli melakukan que
 Jalankan seluruh aplikasi secara lokal dengan satu baris perintah. Dilengkapi konfigurasi Docker Apache PHP 8.3 sehingga Anda tidak perlu repot menginstal server PHP lokal atau perangkat lunak SQLite.
 
 ### 3. 🤖 Baseline Stabil untuk AI Vibe Coding
-Merupakan basis kode rujukan yang ringan untuk asisten AI Anda. Karena struktur database dan rute halamannya kecil dan eksplisit, perubahan berbantuan AI dapat mengikuti baseline yang stabil dan tetap bisa diverifikasi manual.
+Merupakan basis kode rujukan yang ringan untuk asisten AI Anda. Karena struktur database dan rute halamannya kecil dan eksplisit, modifikasi berbantuan AI (AI-assisted coding) dapat mengikuti baseline yang stabil serta tetap mudah diverifikasi secara manual.
 
 ---
 
