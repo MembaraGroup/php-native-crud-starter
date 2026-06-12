@@ -6,6 +6,11 @@
 
 # PHP Native CRUD Starter
 
+<div align="center">
+  <a href="README.md">English</a> | <strong>Bahasa Indonesia</strong>
+</div>
+
+
 Repositori hub tier untuk lini penamaan final `starter`.
 
 Repositori ini adalah bundel donasi publik untuk produk CRUD ramah pemula. Produk yang disertakan saat ini adalah:

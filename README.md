@@ -6,6 +6,11 @@
 
 # PHP Native CRUD Starter
 
+<div align="center">
+  <strong>English</strong> | <a href="README.id.md">Bahasa Indonesia</a>
+</div>
+
+
 [![Verify](https://github.com/MembaraGroup/php-native-crud-starter/actions/workflows/verify.yml/badge.svg)](https://github.com/MembaraGroup/php-native-crud-starter/actions/workflows/verify.yml)
 [![Release](https://img.shields.io/github/v/release/MembaraGroup/php-native-crud-starter?display_name=release)](https://github.com/MembaraGroup/php-native-crud-starter/releases)
 [![Sponsor](https://img.shields.io/badge/donate-support%20maintenance-ff69b4)](https://github.com/sponsors/andiupn?frequency=monthly)
