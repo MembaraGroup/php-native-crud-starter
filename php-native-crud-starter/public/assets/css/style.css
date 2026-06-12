@@ -18,10 +18,11 @@
 
 /* Custom Variables for consistency */
 :root {
-    --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    --primary-gradient: linear-gradient(135deg, #0f7a49 0%, #16a34a 100%);
     --success-gradient: linear-gradient(135deg, #28a745 0%, #20c997 100%);
     --warning-gradient: linear-gradient(135deg, #ffc107 0%, #fd7e14 100%);
     --danger-gradient: linear-gradient(135deg, #dc3545 0%, #c82333 100%);
+    --tier-surface-gradient: linear-gradient(135deg, #0f7a49 0%, #16a34a 100%);
 }
 
 /* Base Typography */
@@ -144,6 +145,55 @@ body {
 /* Custom Footer Styling */
 footer {
     background: #f8f9fa;
+}
+
+.site-header {
+    background: var(--tier-surface-gradient) !important;
+    box-shadow: 0 0.5rem 1.25rem rgba(0, 0, 0, 0.08);
+}
+
+.site-header .navbar-brand,
+.site-header .nav-link,
+.site-header .navbar-toggler {
+    color: #fff !important;
+}
+
+.site-header .nav-link {
+    opacity: 0.88;
+}
+
+.site-header .nav-link:hover,
+.site-header .nav-link:focus,
+.site-header .nav-link.active {
+    color: #fff !important;
+    opacity: 1;
+}
+
+.site-header .navbar-toggler {
+    border-color: rgba(255, 255, 255, 0.35);
+}
+
+.site-header .navbar-toggler:focus {
+    box-shadow: 0 0 0 0.2rem rgba(255, 255, 255, 0.16);
+}
+
+.site-header .navbar-toggler-icon {
+    filter: brightness(0) invert(1);
+}
+
+.site-footer {
+    background: var(--tier-surface-gradient) !important;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.site-footer a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.site-footer a:hover {
+    color: #fff;
+    text-decoration: underline;
 }
 
 /* Responsive Design Enhancements */

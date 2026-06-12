@@ -53,7 +53,7 @@ if (!function_exists('renderLayoutHeader')) {
     <link rel="stylesheet" href="<?= htmlspecialchars(asset_url('css/style.css'), ENT_QUOTES, 'UTF-8'); ?>">
 </head>
 <body class="d-flex flex-column min-vh-100 bg-body">
-    <nav class="navbar navbar-expand-lg navbar-dark bg-success">
+    <nav class="navbar navbar-expand-lg navbar-dark site-header">
         <div class="container-lg">
             <a class="navbar-brand fw-semibold text-white" href="<?= htmlspecialchars(base_url('?route=site/index'), ENT_QUOTES, 'UTF-8'); ?>">
                 <?= htmlspecialchars($appName, ENT_QUOTES, 'UTF-8'); ?>
@@ -91,10 +91,10 @@ if (!function_exists('renderLayoutFooter')) {
         </div>
     </main>
 
-    <footer class="bg-success py-4 mt-auto">
+    <footer class="site-footer py-4 mt-auto">
         <div class="container-lg">
             <div class="d-flex flex-column flex-md-row justify-content-between align-items-start align-items-md-center gap-2">
-                <p class="mb-0 text-white small">
+                <p class="mb-0 text-white-50 small">
                     &copy; <?= date('Y'); ?> <?= htmlspecialchars(config('app_name', 'CRUD Simple'), ENT_QUOTES, 'UTF-8'); ?>. Built for starter-level CRUD learning.
                 </p>
                 <p class="mb-0 small">
