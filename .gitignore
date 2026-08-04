@@ -1,2 +1,46 @@
+# OS files
 .DS_Store
 Thumbs.db
+desktop.ini
+
+# IDEs and Editors
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# PHP
+vendor/
+composer.lock
+*.cache
+.php_cs.cache
+.phpunit.result.cache
+
+# Environment & Secrets
+.env
+.env.local
+.env.*.local
+*.env
+
+# Python (helper scripts)
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Logs
+*.log
+npm-debug.log*
+
+# Node.js (if any)
+node_modules/
+
+# Build output
+dist/
+build/
+
+# Archives
+*.zip
+*.rar
+*.7z
+*.tar.gz
